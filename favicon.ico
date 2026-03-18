@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Square border — matches nav-logo-icon border -->
-  <rect x="2" y="2" width="28" height="28" fill="none" stroke="#0077b6" stroke-width="2.5"/>
-  <!-- Outer ring — matches ::after circle -->
-  <circle cx="16" cy="16" r="8" fill="none" stroke="#00b4d8" stroke-width="1.5"/>
-  <!-- Center dot — matches ::before -->
-  <circle cx="16" cy="16" r="4" fill="#0077b6"/>
-</svg>
