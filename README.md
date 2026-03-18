@@ -174,7 +174,7 @@ IT Support Analyst & Microsoft 365 Engineer
 
 - 🌐 Portfolio: [Pate1Dipesh.github.io](https://Pate1Dipesh.github.io)
 - 💼 LinkedIn: [linkedin.com/in/dipeshpatel-it](https://www.linkedin.com/in/dipeshpatel-it)
-- 🐙 GitHub: [github.com/Pate1Dipesh](https://github.com/Pate1Dipesh)
+- 🐙 GitHub: [github.com/Pate1Dipesh](https://github.com/Pate1Dipesh/Portfolio)
 - 📧 Email: [dipesh91295@gmail.com](mailto:dipesh91295@gmail.com)
 - 📍 Location: Toronto, Ontario, Canada
 
