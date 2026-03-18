@@ -1,4 +1,4 @@
-# Dipesh Patel — Personal Portfolio Website
+# Dipesh Patel - Personal Portfolio Website
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-0077b6)](https://Pate1Dipesh.github.io)
