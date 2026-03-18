@@ -35,7 +35,10 @@ body{font-family:'JetBrains Mono',monospace;background:var(--white);color:var(--
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:62px;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);}
-.nav-logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:.05em;display:flex;align-items:center;gap:.6rem;}
+/*.nav-logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none;letter-spacing:.05em;display:flex;align-items:center;gap:.6rem;}*/
+.nav-logo {font-family: 'Rajdhani', sans-serif;font-weight: 700;font-size: 1.25rem;text-decoration: none;display: flex;align-items: center;gap: 0.6rem;}
+.logo-main {color: #000; /* black */}
+.logo-accent {color: var(--accent2); /* your blue */}  
 .nav-logo-icon{width:28px;height:28px;border:2px solid var(--accent2);display:flex;align-items:center;justify-content:center;position:relative;}
 .nav-logo-icon::before{content:'';width:8px;height:8px;background:var(--accent2);border-radius:50%;}
 .nav-logo-icon::after{content:'';position:absolute;width:18px;height:18px;border:1.5px solid var(--accent);border-radius:50%;animation:ping 2s ease-in-out infinite;}
@@ -307,7 +310,11 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
 .rv{opacity:1;transform:none;}
 .rv.d1{} .rv.d2{} .rv.d3{}
 
-/* RESPONSIVE */
+/* RESPONSIVE /* <nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    DP<span style="color:var(--accent2)">ortfolio</span>
+  </a> */*/
 @media(max-width:960px){
   nav{padding:0 1.5rem;} .nav-links{display:none;} .ham{display:block;}
   #hero{grid-template-columns:1fr;min-height:auto;}
@@ -333,11 +340,12 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
 <div id="curR"></div>
 <div id="prog"></div>
 
-<nav id="nav">
   <a href="#hero" class="nav-logo">
-    <div class="nav-logo-icon"></div>
-    DP<span style="color:var(--accent2)">_IT</span>
-  </a>
+  <div class="nav-logo-icon"></div>
+  <span class="logo-text">
+    <span class="logo-main">DP</span><span class="logo-accent">ortfolio</span>
+  </span>
+</a>
   <div class="nav-status">System Online</div>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">Profile</a></li>
