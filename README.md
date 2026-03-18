@@ -172,9 +172,9 @@ You are free to use this code as a template or reference for your own portfolio.
 **Dipesh Patel**
 IT Support Analyst & Microsoft 365 Engineer
 
-- 🌐 Portfolio: [Pate1Dipesh.github.io](https://Pate1Dipesh.github.io)
+- 🌐 Portfolio: [Pate1Dipesh.github.io](https://Pate1Dipesh.github.io/Portfolio)
 - 💼 LinkedIn: [linkedin.com/in/dipeshpatel-it](https://www.linkedin.com/in/dipeshpatel-it)
-- 🐙 GitHub: [github.com/Pate1Dipesh](https://github.com/Pate1Dipesh/Portfolio)
+- 🐙 GitHub: [github.com/Pate1Dipesh](https://github.com/Pate1Dipesh)
 - 📧 Email: [dipesh91295@gmail.com](mailto:dipesh91295@gmail.com)
 - 📍 Location: Toronto, Ontario, Canada
 
