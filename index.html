@@ -564,7 +564,8 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
         <div class="exp-tab active" data-idx="0"><div class="tab-co">S.i. Systems</div><div class="tab-date">Nov 2025 – Present</div></div>
         <div class="exp-tab" data-idx="1"><div class="tab-co">HCLTech</div><div class="tab-date">Dec 2024 – Nov 2025</div></div>
         <div class="exp-tab" data-idx="2"><div class="tab-co">BreezeMaxWeb</div><div class="tab-date">Sep 2023 – Dec 2023</div></div>
-        <div class="exp-tab" data-idx="3"><div class="tab-co">Systigrator</div><div class="tab-date">Jul 2019 – Jan 2022</div></div>
+        <div class="exp-tab" data-idx="3"><div class="tab-co">Systigrator Solutions</div><div class="tab-date">Jul 2010 – Jan 2022</div></div>
+        <div class="exp-tab" data-idx="4"><div class="tab-co">Systigrator Solutions</div><div class="tab-date">Jul 2019 – Jun 2020</div></div>
       </div>
       <div id="expPanel" class="exp-panel"></div>
     </div>
@@ -862,8 +863,9 @@ const expData=[
      'Managing enterprise-level Microsoft 365, Entra ID, and Zscaler deployments with a heavy focus on automated device provisioning using Intune and Autopilot.',
      'Collaborating closely with Infrastructure and Development teams to maintain a high-standard service environment and drive continuous improvement in IT operations.',
      'Overseeing endpoint security posture, Conditional Access policy enforcement, and compliance reviews across a hybrid enterprise environment.',
+     'Streamlining IT workflows and device lifecycle processes, reducing provisioning bottlenecks and improving cross-regional support delivery timelines',
    ],
-   tags:['Microsoft 365','Intune','Entra ID','Zscaler','Autopilot','ServiceNow']},
+   tags:['Microsoft 365','Intune','Entra ID','Zscaler','Autopilot','InvGate','Conditional Access']},
   {company:'HCLTech (Client: PowerCo)',role:'IT Support Analyst',date:'Dec 2024 – Nov 2025',status:'Previous Role',
    bullets:[
      'Delivered L1/L1.5 support for desktops, laptops, mobile devices, Office 365 applications, printer setups, meeting room setup, and VPN access across PowerCo\'s enterprise environment.',
@@ -879,17 +881,27 @@ const expData=[
      'Assisted in the installation and configuration of Microsoft Exchange and Office 365 apps (Outlook, Teams, OneDrive), helping streamline user access.',
      'Supported secure remote work enablement by configuring VPNs and remote access, maintaining 100% SLA compliance for all connectivity requests.',
      'Participated in device provisioning and OS reimaging, reducing setup time through standardised processes and automated configurations.',
+     'Documented support procedures, FAQs, and resolution paths, contributing to a team-wide knowledge base that reduced repeat incident escalations.',
    ],
    tags:['Office 365','VPN','Windows OS','Active Directory','Remote Support']},
-  {company:'Systigrator Solutions',role:'IT System Administrator',date:'Jul 2019 – Jan 2022',status:'Previous Role',
+  {company:'Systigrator Solutions',role:'IT System Administrator',date:'Jul 2020 – Jan 2022',status:'Previous Role',
    bullets:[
      'Administered Microsoft 365 and Entra ID, managing user accounts, licences, permissions, access reviews, and Conditional Access/MFA policies to enhance security.',
      'Managed endpoint compliance and device lifecycle using Microsoft Intune, Autopilot, and GPO, reducing onboarding time and improving operational efficiency.',
      'Implemented Zero Trust security controls, VPN/firewall configurations, and Microsoft Defender for Endpoint, strengthening data protection and compliance standards.',
-     'Maintained Veeam and Datto backups, performed test restores, and documented recovery procedures to ensure business continuity across the organisation.',
+     'Maintained backups, performed test restores, and documented recovery procedures to ensure business continuity across the organisation.',
      'Automated administrative tasks and reporting using PowerShell, reducing repetitive work and human errors across IT operations.',
    ],
-   tags:['Microsoft 365','Intune','PowerShell','VMware','AWS','Zero Trust']},
+   tags:['Microsoft 365','Intune','PowerShell','VMware','AWS','Zero Trust','CISCO']},
+  {company:'Systigrator Solutions',role:'IT Support Specialist',date:'Jul 2019 – Jun 2020',status:'Previous Role',
+   bullets:[
+     'Delivered comprehensive IT support to 300+ students, teachers, and administrative staff, managing 25–30 daily tickets across hardware, software, network, and account-related issues while maintaining 98%+ CSAT ratings.',
+     'Imaged and provisioned Windows endpoints using SCCM, deployed essential applications, and facilitated onboarding through domain integration and Active Directory account setup.',
+     'Managed and maintained LAN/WAN, wireless access points, classroom printer infrastructure, and CCTV systems, ensuring 24/7 uptime and reducing operational downtime.',
+     'Configured and maintained secure VPN access using Cisco AnyConnect, improving remote access reliability and reducing RDP-related support escalations.',
+     'Administered Tally and server file backups, maintained detailed IT asset records, and enforced endpoint protection policies to safeguard school data and ensure SLA compliance.',
+   ],
+   tags:['SCCM','Windows Server','Cisco anyConnect','Mac OS','LAN/WAN','Security System']},
 ];
 function renderExp(i){
   const d=expData[i];
