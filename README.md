@@ -10,7 +10,7 @@
 
 ## 🌐 Live Site
 
-**[Pate1Dipesh.github.io](https://Pate1Dipesh.github.io)**
+**[Pate1Dipesh.github.io](https://Pate1Dipesh.github.io/Portfolio)**
 
 ---
 
