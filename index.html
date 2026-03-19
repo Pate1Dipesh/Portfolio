@@ -316,22 +316,70 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
     <div class="nav-logo-icon"></div>
     DP<span style="color:var(--accent2)">ortfolio</span>
   </a> */*/
+/* ── TABLET ≤960px ── */
 @media(max-width:960px){
-  nav{padding:0 1.5rem;} .nav-links{display:none;} .ham{display:block;}
-  #hero{grid-template-columns:1fr;min-height:auto;}
-  .hero-right{height:300px;border-left:none;border-top:1px solid var(--border);}
-  .hero-left{padding:4rem 1.5rem 3rem;}
+  nav{padding:0 1.5rem;}
+  .nav-links{display:none;}
+  .ham{display:block;}
+  #hero{min-height:auto;}
+  .hero-left{
+    width:100%;
+    padding:4rem 1.5rem 3rem;
+    background:linear-gradient(to bottom,rgba(255,255,255,1) 0%,rgba(255,255,255,.97) 80%,rgba(255,255,255,.85) 100%);
+    min-height:auto;
+  }
+  #dotLegend{display:none;}
+  .hero-badges{display:none;}
+  h1.hero-name{font-size:clamp(2.8rem,8vw,4.5rem);}
   .sec{padding:4rem 1.5rem;}
   .about-layout{grid-template-columns:1fr;gap:3rem;}
   .exp-layout{grid-template-columns:1fr;}
-  .exp-tabs{border-right:none;border-bottom:1px solid var(--border);display:flex;overflow-x:auto;}
-  .exp-tab{border-bottom:none;border-left:none;border-bottom:3px solid transparent;flex-shrink:0;}
-  .exp-tab.active{border-bottom-color:var(--accent2);border-left-color:transparent;}
+  .exp-tabs{border-right:none;border-bottom:1px solid var(--border);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .exp-tab{border-left:none;border-bottom:3px solid transparent;flex-shrink:0;padding:1rem 1.25rem;}
+  .exp-tab.active{border-bottom-color:var(--accent2);border-left-color:transparent;background:var(--off2);}
   .exp-panel{padding:2rem 1.5rem;}
-  .proj-grid{grid-template-columns:1fr;}
+  .exp-panel-head{flex-direction:column;gap:.75rem;align-items:flex-start;}
+  .cert-track,.proj-track{grid-template-columns:1fr 1fr;}
+  .proj-cat-bar{flex-direction:column;align-items:flex-start;}
   .edu-grid{grid-template-columns:1fr;}
   .contact-layout{grid-template-columns:1fr;gap:3rem;}
   footer{flex-direction:column;gap:1rem;text-align:center;}
+}
+/* ── MOBILE ≤600px ── */
+@media(max-width:600px){
+  nav{padding:0 1rem;}
+  .nav-status{display:none;}
+  .hero-left{padding:3rem 1rem 2.5rem;}
+  h1.hero-name{font-size:clamp(2.4rem,10vw,3.5rem);}
+  .hero-tag{font-size:.58rem;}
+  .hero-role{font-size:.72rem;}
+  .hero-desc{font-size:.78rem;max-width:100%;}
+  .hero-metrics{gap:1.25rem;flex-wrap:wrap;}
+  .hero-btns{flex-direction:column;gap:.75rem;}
+  .btn-solid,.btn-out{width:100%;justify-content:center;padding:.7rem 1.25rem;}
+  .sec{padding:3rem 1rem;}
+  .sec-head{gap:.75rem;margin-bottom:2.5rem;}
+  .sec-title{font-size:clamp(1.8rem,7vw,2.5rem);}
+  .exp-panel{padding:1.5rem 1rem;}
+  .exp-role{font-size:1.4rem;}
+  .exp-panel-head{flex-direction:column;gap:.5rem;align-items:flex-start;}
+  .exp-bullets li{font-size:.74rem;}
+  .cert-track,.proj-track{grid-template-columns:1fr;}
+  .proj-cats{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;}
+  .proj-cat-bar{flex-direction:column;align-items:flex-start;gap:.75rem;}
+  .stat-row{flex-direction:column;align-items:flex-start;gap:.25rem;padding:.6rem 0;}
+  .stat-v{font-size:.95rem;}
+  .contact-big{font-size:clamp(2rem,8vw,3rem);}
+  .contact-btns{flex-direction:column;}
+  .contact-btns .btn-solid,.contact-btns .btn-out{width:100%;justify-content:center;}
+  .footer-r{gap:1.25rem;flex-wrap:wrap;justify-content:center;}
+}
+/* ── SMALL MOBILE ≤380px ── */
+@media(max-width:380px){
+  .hero-left{padding:2.5rem 1rem 2rem;}
+  h1.hero-name{font-size:2.2rem;}
+  .metric-val{font-size:1.6rem;}
+  .sec{padding:2.5rem 1rem;}
 }
 </style>
 </head>
@@ -657,6 +705,17 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
       <h2 class="sec-title">Certifications</h2>
       <div class="sec-line"></div>
     </div>
+    <div class="proj-cat-bar rv" style="margin-bottom:2rem;">
+      <div class="proj-cats">
+        <button class="proj-cat cert-fb active" data-issuer="all">All</button>
+        <button class="proj-cat cert-fb" data-issuer="Amazon Web Services">AWS</button>
+        <button class="proj-cat cert-fb" data-issuer="Cisco Systems">Cisco</button>
+        <button class="proj-cat cert-fb" data-issuer="CompTIA">CompTIA</button>
+        <button class="proj-cat cert-fb" data-issuer="LinkedIn">LinkedIn</button>
+        <button class="proj-cat cert-fb" data-issuer="Microsoft">Microsoft</button>
+      </div>
+      <span class="proj-count"><span id="certCountNum">3</span> of <span id="certCountTotal">9</span> certifications</span>
+    </div>
     <div class="cert-carousel rv">
       <div class="cert-track-wrap">
         <div class="cert-track" id="certTrack"></div>
@@ -689,7 +748,7 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
         <div class="contact-big">Let's build<br>something <span>great.</span></div>
         <p class="contact-sub">Open to IT Specialist, Microsoft 365 Engineer, Endpoint Administrator, and Cloud Operations roles. If you're building a modern, secure IT environment and need someone who gets things done — let's talk.</p>
         <div class="contact-btns">
-          <a href="mailto:dipesh91295@gmail.com" class="btn-solid">
+          <a href="/cdn-cgi/l/email-protection#94f0fde4f1e7fcada5a6ada1d4f3f9f5fdf8baf7fbf9" class="btn-solid">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg>
             Send Email
           </a>
@@ -703,9 +762,9 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
             <span class="cp-head-ping">Responding</span>
           </div>
           <ul class="cp-links">
-            <li><a href="mailto:dipesh91295@gmail.com" class="cp-link">
+            <li><a href="/cdn-cgi/l/email-protection#adc9c4ddc8dec5949c9f9498edcac0ccc4c183cec2c0" class="cp-link">
               <div class="cp-link-icon"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></div>
-              <div><div class="cp-link-label">Email</div><div class="cp-link-val">dipesh91295@gmail.com</div></div>
+              <div><div class="cp-link-label">Email</div><div class="cp-link-val"><span class="__cf_email__" data-cfemail="7a1e130a1f0912434b48434f3a1d171b131654191517">[email&#160;protected]</span></div></div>
               <div class="cp-link-arr">›</div>
             </a></li>
             <li><a href="https://www.linkedin.com/in/dipeshpatel-it" target="_blank" rel="noopener" class="cp-link">
@@ -735,11 +794,11 @@ footer{background:var(--text);color:var(--text3);padding:1.75rem 3rem;display:fl
   <div class="footer-r">
     <a href="https://github.com/Pate1Dipesh" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/dipeshpatel-it" target="_blank">LinkedIn</a>
-    <a href="mailto:dipesh91295@gmail.com">Email</a>
+    <a href="/cdn-cgi/l/email-protection#8febe6ffeafce7b6bebdb6bacfe8e2eee6e3a1ece0e2">Email</a>
   </div>
 </footer>
 
-<script src="projects-data.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="projects-data.js"></script>
 <script>
 /* CURSOR */
 const cur=document.getElementById('cur'),curR=document.getElementById('curR');
@@ -1187,10 +1246,10 @@ function renderProjects(dir){
   setTimeout(()=>{ track.classList.remove('slide-left','slide-right'); }, 350);
 }
 
-// Category buttons
-document.querySelectorAll('.proj-cat').forEach(btn => {
+// Category buttons — scoped to [data-cat] so cert buttons are unaffected
+document.querySelectorAll('.proj-cat[data-cat]').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.proj-cat').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.proj-cat[data-cat]').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     projCat = btn.dataset.cat;
     projPage = 0;
@@ -1218,7 +1277,12 @@ const CERTS = [
 ];
 
 let certPage = 0;
+let certIssuer = 'all';
 const CERT_PAGE = 3;
+
+function filteredCerts(){
+  return certIssuer === 'all' ? CERTS : CERTS.filter(c => c.issuer === certIssuer);
+}
 
 function certCardHTML(c, idx){
   const delay = idx===0?'':idx===1?' d1':' d2';
@@ -1233,18 +1297,24 @@ function certCardHTML(c, idx){
 }
 
 function renderCerts(dir){
-  const pages = Math.ceil(CERTS.length / CERT_PAGE);
-  certPage = Math.max(0, Math.min(certPage, pages-1));
-  const slice = CERTS.slice(certPage*CERT_PAGE, certPage*CERT_PAGE+CERT_PAGE);
+  const list = filteredCerts();
+  const pages = Math.ceil(list.length / CERT_PAGE);
+  certPage = Math.max(0, Math.min(certPage, pages - 1));
+  const slice = list.slice(certPage*CERT_PAGE, certPage*CERT_PAGE+CERT_PAGE);
 
-  let html = slice.map((c,i)=>certCardHTML(c,i)).join('');
-  if(slice.length < CERT_PAGE){
+  let html = slice.length
+    ? slice.map((c,i)=>certCardHTML(c,i)).join('')
+    : `<div class="cert-card" style="grid-column:1/-1;background:var(--white);display:flex;align-items:center;justify-content:center;padding:3rem;color:var(--text3);font-size:.8rem;letter-spacing:.1em;pointer-events:none;">No certifications in this category.</div>`;
+  if(slice.length > 0 && slice.length < CERT_PAGE){
     for(let i=slice.length;i<CERT_PAGE;i++) html += `<div class="cert-card" style="background:var(--off2);pointer-events:none;"></div>`;
   }
 
   const track = document.getElementById('certTrack');
   track.className = 'cert-track' + (dir ? ' '+dir : '');
   track.innerHTML = html;
+
+  document.getElementById('certCountNum').textContent = Math.min((certPage+1)*CERT_PAGE, list.length);
+  document.getElementById('certCountTotal').textContent = list.length;
 
   const dotsEl = document.getElementById('certDots');
   dotsEl.innerHTML = '';
@@ -1260,8 +1330,19 @@ function renderCerts(dir){
   setTimeout(()=>{ track.classList.remove('slide-left','slide-right'); }, 350);
 }
 
+// cert filter — scoped to [data-issuer] so it never touches project buttons
+document.querySelectorAll('.cert-fb').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.cert-fb').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    certIssuer = btn.dataset.issuer;
+    certPage = 0;
+    renderCerts('slide-left');
+  });
+});
+
 document.getElementById('certPrev').addEventListener('click',()=>{ if(certPage>0){certPage--;renderCerts('slide-right');} });
-document.getElementById('certNext').addEventListener('click',()=>{ const pages=Math.ceil(CERTS.length/CERT_PAGE);if(certPage<pages-1){certPage++;renderCerts('slide-left');} });
+document.getElementById('certNext').addEventListener('click',()=>{ const pages=Math.ceil(filteredCerts().length/CERT_PAGE);if(certPage<pages-1){certPage++;renderCerts('slide-left');} });
 
 renderCerts();
 </script>
