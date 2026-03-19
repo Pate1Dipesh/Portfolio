@@ -65,7 +65,7 @@ const PROJECTS = [
     outcomes:['Zero-touch provisioning under 30 minutes','Hybrid identity sync with no errors','All compliance policies enforced on enrolment','Conditional Access blocking non-compliant devices','Full runbook documented'],
     // screenshots: map step index (0-based) → image path relative to site root
     // e.g. { 0: 'screenshots/proj01/step1.png', 1: 'screenshots/proj01/step2.png' }
-    screenshots: {0: 'Screenshots/1.png'},
+    screenshots: {1: 'Screenshots/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
