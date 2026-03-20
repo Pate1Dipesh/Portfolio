@@ -20,9 +20,11 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:'JetBrains Mono',monospace;background:var(--white);color:var(--text);overflow-x:hidden;cursor:none;}
+body{font-family:'JetBrains Mono',monospace;background:var(--white);color:var(--text);overflow-x:hidden;}
+@media(pointer:fine){body{cursor:none;}}
 
 /* ── CURSOR ── */
+@media(pointer:coarse){#cur,#curR{display:none;}}
 #cur{width:10px;height:10px;background:var(--accent2);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;}
 #cur.h{width:6px;height:6px;background:var(--accent);}
 #curR{width:36px;height:36px;border:1.5px solid var(--accent);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,opacity .25s;}
@@ -159,8 +161,120 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   color:rgba(255,255,255,.5);white-space:nowrap;
   font-family:'JetBrains Mono',monospace;
 }
-@media(max-width:1100px){.step-item-inner{grid-template-columns:44px 1fr;} .step-sc{grid-column:2;}}
-@media(max-width:760px){.step-item-inner{grid-template-columns:1fr;} .step-num{font-size:1.8rem;}}
+/* ════════════════════════════════════════════════════════
+   RESPONSIVE LAYOUT — project.html
+   1200px · 960px · 768px · 600px · 380px
+════════════════════════════════════════════════════════ */
+
+/* ── 1200px: tighten large screens ── */
+@media(max-width:1200px){
+  #proj-hero,.tech-bar,.proj-body,.proj-nav-bar,footer{padding-left:2rem;padding-right:2rem;}
+  .proj-body-grid{gap:3rem;}
+  .step-item-inner{gap:2rem;}
+}
+
+/* ── 1100px: step screenshot drops below text ── */
+@media(max-width:1100px){
+  .step-item-inner{grid-template-columns:44px 1fr;}
+  .step-sc{grid-column:2;}
+}
+
+/* ── 960px: tablet landscape ── */
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}
+  #proj-hero,.tech-bar,.proj-body,.proj-nav-bar,footer{padding-left:1.5rem;padding-right:1.5rem;}
+  #proj-hero{padding-top:5rem;padding-bottom:3rem;}
+  .proj-hero-layout{grid-template-columns:1fr;}
+  .proj-hero-right{
+    align-items:flex-start;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:1.5rem;
+  }
+  .proj-num-big{font-size:4rem;}
+  .proj-body-grid{grid-template-columns:1fr;}
+  .proj-sidebar{position:static;top:auto;}
+  .proj-nav-inner{gap:1rem;}
+  .proj-nav-name{font-size:.9rem;}
+}
+
+/* ── 768px: tablet portrait ── */
+@media(max-width:768px){
+  #proj-hero{padding-top:4.5rem;padding-bottom:2.5rem;}
+  .proj-title{font-size:clamp(1.8rem,6vw,3rem);}
+  .proj-subtitle{font-size:.8rem;}
+  .proj-meta-row{gap:1.25rem;}
+  .proj-num-big{font-size:3rem;}
+  .tech-bar{padding-top:.75rem;padding-bottom:.75rem;}
+  .proj-body{padding-top:3rem;padding-bottom:3rem;}
+  .step-item{padding:1.75rem 0;}
+  .step-title{font-size:1.1rem;}
+  .step-desc{font-size:.75rem;}
+  .proj-nav-bar{padding-top:1.25rem;padding-bottom:1.25rem;}
+  .proj-nav-btn{padding:.6rem 1rem;gap:.75rem;}
+}
+
+/* ── 760px: step layout simplifies ── */
+@media(max-width:760px){
+  .step-item-inner{grid-template-columns:1fr;}
+  .step-num{font-size:1.8rem;}
+  .step-sc{grid-column:1;margin-top:1rem;}
+}
+
+/* ── 600px: large phone ── */
+@media(max-width:600px){
+  nav{padding:0 1rem;height:56px;}
+  .nav-crumb{display:none;}
+  #proj-hero,.tech-bar,.proj-body,.proj-nav-bar,footer{padding-left:1.25rem;padding-right:1.25rem;}
+  #proj-hero{padding-top:4rem;padding-bottom:2rem;}
+  .proj-back-crumb{font-size:.58rem;margin-bottom:1.25rem;}
+  .proj-title{font-size:clamp(1.6rem,8vw,2.4rem);margin-bottom:1rem;}
+  .proj-subtitle{font-size:.76rem;line-height:1.7;margin-bottom:1.5rem;}
+  .proj-meta-row{gap:1rem;padding-top:1.25rem;}
+  .proj-meta-label{font-size:.55rem;}
+  .proj-meta-val{font-size:.75rem;}
+  .proj-num-big{font-size:2.5rem;}
+  .proj-hero-right{gap:.75rem;}
+  .proj-links{justify-content:flex-start;}
+  .proj-link-btn{font-size:.6rem;padding:.45rem .9rem;}
+  .tech-bar{padding-top:.65rem;padding-bottom:.65rem;}
+  .tech-bar-inner{gap:1rem;}
+  .tech-pill{font-size:.6rem;padding:.22rem .6rem;}
+  .proj-body{padding-top:2.5rem;padding-bottom:2.5rem;}
+  .section-label{font-size:.56rem;margin-bottom:1rem;}
+  .proj-overview p{font-size:.78rem;line-height:1.8;}
+  .step-item{padding:1.5rem 0;}
+  .step-num{font-size:1.5rem;}
+  .step-title{font-size:1rem;}
+  .step-desc{font-size:.73rem;}
+  .step-code{font-size:.65rem;padding:.7rem .85rem;}
+  .sidebar-panel-body{padding:1rem;}
+  .outcome-list li{font-size:.7rem;}
+  .related-name{font-size:.68rem;}
+  .proj-nav-bar{padding-top:1rem;padding-bottom:1rem;}
+  .proj-nav-inner{gap:.75rem;}
+  .proj-nav-btn{padding:.5rem .85rem;gap:.6rem;}
+  .proj-nav-arrow{width:30px;height:30px;}
+  .proj-nav-name{font-size:.82rem;}
+  .proj-nav-dir{font-size:.54rem;}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.25rem 1rem;}
+  .footer-r{justify-content:center;gap:1rem;flex-wrap:wrap;}
+  .footer-r a{font-size:.58rem;}
+}
+
+/* ── 380px: small phone ── */
+@media(max-width:380px){
+  nav{height:52px;}
+  #proj-hero{padding-top:3.5rem;}
+  .proj-title{font-size:1.5rem;}
+  .proj-subtitle{font-size:.73rem;}
+  .proj-num-big{font-size:2rem;}
+  .proj-body{padding-top:2rem;padding-bottom:2rem;}
+  .step-title{font-size:.95rem;}
+  .proj-nav-btn{padding:.45rem .7rem;}
+  .proj-nav-name{font-size:.75rem;}
+}
 
 /* Sidebar */
 .proj-sidebar{display:flex;flex-direction:column;gap:1.5rem;position:sticky;top:82px;}
@@ -213,20 +327,7 @@ footer{background:var(--text);color:var(--text3);padding:1.5rem 3rem;display:fle
 .fade-in.d3{animation-delay:.45s;}
 .fade-in.d4{animation-delay:.6s;}
 
-@media(max-width:960px){
-  nav{padding:0 1.5rem;}
-  #proj-hero,
-  .tech-bar,
-  .proj-body,
-  .proj-nav-bar,
-  footer{padding-left:1.5rem;padding-right:1.5rem;}
-  .proj-hero-layout{grid-template-columns:1fr;}
-  .proj-hero-right{align-items:flex-start;flex-direction:row;flex-wrap:wrap;}
-  .proj-num-big{font-size:3.5rem;}
-  .proj-body-grid{grid-template-columns:1fr;}
-  .proj-sidebar{position:static;}
-  .screenshots-grid{grid-template-columns:1fr;}
-}
+/* responsive handled above */
 </style>
 </head>
 <body>
