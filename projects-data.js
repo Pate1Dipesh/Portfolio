@@ -26,7 +26,7 @@
  *   outcomes       → array of outcome strings (used internally — extend if needed)
  *
  *   screenshots    → object mapping step index (0-based) to image path/URL
- *                    e.g. { 0: 'screenshots/proj01/step1.png', 2: 'screenshots/proj01/step3.png' }
+ *                    e.g. { 0: 'assets/img/p/proj01-step1.png', 2: 'assets/img/p/proj01-step3.png' }
  *                    Steps without an entry show a neutral "No screenshot" placeholder.
  *                    Images are displayed with object-fit:contain — nothing is cropped,
  *                    the image scales to fit the 16:9 box automatically.
@@ -64,8 +64,8 @@ const PROJECTS = [
     ],
     outcomes:['Zero-touch provisioning under 30 minutes','Hybrid identity sync with no errors','All compliance policies enforced on enrolment','Conditional Access blocking non-compliant devices','Full runbook documented'],
     // screenshots: map step index (0-based) → image path relative to site root
-    // e.g. { 0: 'screenshots/proj01/step1.png', 1: 'screenshots/proj01/step2.png' }
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    // e.g. { 0: 'assets/img/p/proj01-step1.png', 1: 'assets/img/p/proj01-step2.png' }
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -97,7 +97,7 @@ const PROJECTS = [
       {title:'Implement Conditional Access', desc:'Created CA policies in Entra ID requiring compliant device + MFA for all cloud app access. Tested block/allow scenarios across all platforms.', code:null},
     ],
     outcomes:['500+ devices under managed compliance','BYOD data protection without full MDM','CA blocking non-compliant access','Device onboarding time -65%','Zero policy conflicts across platforms'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -129,7 +129,7 @@ const PROJECTS = [
       {title:'Build Workbooks & Dashboards', desc:'Created executive and SOC analyst workbooks showing sign-in trends, alert volume, top incident categories, and SLA compliance metrics.', code:null},
     ],
     outcomes:['MTTD from 4 hours to 15 minutes','60% of incidents fully automated','25+ custom detection rules','Zero false positives after tuning','Executive dashboard live'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -160,7 +160,7 @@ const PROJECTS = [
       {title:'Assign Profiles & Test', desc:'Assigned deployment profiles to device groups, performed test runs with fresh Windows installations, validated all apps and policies applied, and documented the full flow.', code:null},
     ],
     outcomes:['Setup time 3 hours → 30 minutes','Zero IT hands-on per device','All policies applied before login','Scalable to 500+ with no change','Reduced helpdesk calls from new devices'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -192,7 +192,7 @@ const PROJECTS = [
       {title:'Deploy Patches & Updates', desc:'Configured Software Update Point, created patch deployment rings (pilot → broad), and built compliance reports for WSUS/SCCM patch status tracking.', code:null},
     ],
     outcomes:['Standardised image across 500+ endpoints','Provisioning reduced to 45 minutes','99.5% deployment success rate','Patch compliance 98%','App packaging library reused'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -224,7 +224,7 @@ const PROJECTS = [
       {title:'Test & Document Process', desc:'Performed factory-reset enrolment tests, validated all apps and policies applied within 10 minutes, and produced a device provisioning runbook for the helpdesk team.', code:null},
     ],
     outcomes:['80+ iOS devices under MDM','Zero-touch enrolment < 10 minutes','100% compliance achieved','12 enterprise apps silently pushed','Helpdesk runbook produced'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -256,7 +256,7 @@ const PROJECTS = [
       {title:'Deploy Microsoft Defender for Endpoint', desc:'Onboarded all Windows devices to MDE via Intune, configured security baselines, enabled attack surface reduction rules, and integrated with Sentinel.', code:null},
     ],
     outcomes:['MFA for 100% of users','Legacy auth fully blocked','All privileged access via PIM','Secure Score +42 points','Zero phishing compromises post-deploy'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -288,7 +288,7 @@ const PROJECTS = [
       {title:'Integrate with Entra ID & Onboarding', desc:'Set up SAML SSO between Zscaler and Entra ID, built group-based policy mapping, and automated ZPA group assignment for new user onboarding via SCIM provisioning.', code:null},
     ],
     outcomes:['100% traffic inspected via ZIA','Legacy VPN fully replaced by ZPA','New user access automated on onboarding','DLP preventing data exfiltration','VPN support tickets reduced to zero'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -320,7 +320,7 @@ const PROJECTS = [
       {title:'Deploy via Azure Automation', desc:'Published scripts as Azure Automation Runbooks with Managed Identity permissions, scheduled triggers, and Teams/email alerting on failures.', code:null},
     ],
     outcomes:['Provisioning reduced from 45 min to 3 min','10+ hours/week saved','~$2,400/year licence cost saving','Zero provisioning errors since deploy','Weekly reporting fully automated'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
   {
@@ -352,6 +352,6 @@ const PROJECTS = [
       {title:'Integrate with Incident Management', desc:'Configured ServiceNow to surface relevant KB articles during incident creation, track article usage, and identify gaps based on unresolved tickets.', code:null},
     ],
     outcomes:['FCR improved +15% in 60 days','Repeat ticket volume -30%','New analyst onboarding time halved','40+ articles published','Articles added weekly from new incidents'],
-    screenshots: {0: 'Screenshots/1.png',1: 'Screenshots/1.png',3: 'Screenshots/1.png'},
+    screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
 ];

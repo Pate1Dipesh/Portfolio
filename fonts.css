@@ -1,0 +1,92 @@
+/* Self-hosted fonts — replaces Google Fonts
+   Place this file at: fonts/fonts.css
+   Place font files at: fonts/Rajdhani-*.woff2 and fonts/JetBrainsMono-*.woff2
+
+   Download URLs (run once, then commit to your repo):
+   Rajdhani:
+     https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pasEfOre.woff2   → fonts/Rajdhani-Regular.woff2
+     https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pb4EfOre.woff2   → fonts/Rajdhani-Medium.woff2
+     https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pbEEfOre.woff2   → fonts/Rajdhani-SemiBold.woff2
+     https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pbgEfOre.woff2   → fonts/Rajdhani-Bold.woff2
+   JetBrains Mono:
+     https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOT.woff2  → fonts/JetBrainsMono-Light.woff2
+     https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8SKxTOlOT.woff2  → fonts/JetBrainsMono-Regular.woff2
+     https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjOQ.woff2    → fonts/JetBrainsMono-Medium.woff2
+     https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjOQ.woff2    → fonts/JetBrainsMono-Bold.woff2
+*/
+
+/* Rajdhani */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('Rajdhani-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Rajdhani-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('Rajdhani-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('Rajdhani-Bold.woff2') format('woff2');
+}
+
+/* JetBrains Mono */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('JetBrainsMono-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('JetBrainsMono-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('JetBrainsMono-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+/* Italic variants for JetBrains Mono */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('JetBrainsMono-LightItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('JetBrainsMono-Italic.woff2') format('woff2');
+}
