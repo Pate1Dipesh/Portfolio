@@ -43,7 +43,7 @@ const PROJECTS = [
     tagline:'A full hybrid enterprise reference architecture — on-prem Active Directory synced to Entra ID via AD Connect, with zero-touch Autopilot provisioning and Intune policy enforcement end-to-end.',
     tech:['Azure AD','Microsoft Intune','Windows Autopilot','AD Connect','SCCM','PowerShell'],
     icon:'<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>',
-    link:'https://github.com/Pate1Dipesh/HybridIT-Infrastructure-Lab-EnterpriseLevel-Simulation',
+    link:'https://github.com/Pate1Dipesh/Hybrid-IT-Infrastructure-Lab-Enterprise-Level-Simulation',
     meta:[
       {label:'Type', val:'Personal Lab Project'},
       {label:'Duration', val:'3 Months'},
