@@ -68,7 +68,7 @@ const PROJECTS = [
     screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
-  {
+ /* {
     id:'02', num:'02',
     cat:'microsoft', catLabel:'Microsoft 365 & Endpoint',
     status:'live', statusLabel:'Live',
@@ -353,5 +353,5 @@ const PROJECTS = [
     ],
     outcomes:['FCR improved +15% in 60 days','Repeat ticket volume -30%','New analyst onboarding time halved','40+ articles published','Articles added weekly from new incidents'],
     screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
-  },
+  },*/
 ];
