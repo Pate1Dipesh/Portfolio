@@ -68,7 +68,7 @@ const PROJECTS = [
     screenshots: {0: 'assets/img/p/1.png',1: 'assets/img/p/1.png',3: 'assets/img/p/1.png'},
   },
   // ─────────────────────────────────────────────────────────────
- /* {
+  {
     id:'02', num:'02',
     cat:'microsoft', catLabel:'Microsoft 365 & Endpoint',
     status:'live', statusLabel:'Live',
