@@ -50,7 +50,7 @@ const PROJECTS = [
       {label:'Environment', val:'Hybrid (On-Prem + Cloud)', cls:'blue'},
       {label:'Status', val:'Completed', cls:'green'},
     ],
-    overview:[
+ /*   overview:[
       'This project simulates a real-world hybrid enterprise IT environment, integrating on-premises Active Directory with Microsoft Entra ID (Azure AD) via Azure AD Connect. The goal was to build a reference architecture that mirrors what modern organisations use for identity management, device provisioning, and endpoint security.',
       'The lab covers the full device lifecycle — from bare-metal Windows installation and domain join, through Autopilot zero-touch provisioning, to Intune compliance policy enforcement and conditional access. All configurations were documented with step-by-step runbooks for repeatability.',
       'This project was built to sharpen real-world skills in Microsoft Modern Workplace technologies and serves as a reference architecture for enterprise deployments in my day-to-day role.',
