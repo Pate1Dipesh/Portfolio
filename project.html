@@ -337,6 +337,43 @@ footer{background:var(--text);color:var(--text3);padding:1.5rem 3rem;display:fle
 <div id="curR"></div>
 <div id="prog"></div>
 
+<!-- CURSOR — standalone isolated script, nothing can break this -->
+<script>
+(function(){
+  var cur  = document.getElementById('cur');
+  var curR = document.getElementById('curR');
+  if(!cur || !curR) return;
+  var mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX; my=e.clientY;
+    cur.style.left=mx+'px'; cur.style.top=my+'px';
+  });
+  (function anim(){
+    rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+    curR.style.left=rx+'px'; curR.style.top=ry+'px';
+    requestAnimationFrame(anim);
+  })();
+  function addHover(el){
+    el.addEventListener('mouseenter',function(){ cur.classList.add('h'); curR.classList.add('h'); });
+    el.addEventListener('mouseleave',function(){ cur.classList.remove('h'); curR.classList.remove('h'); });
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('a,button').forEach(addHover);
+    var mo = new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        m.addedNodes.forEach(function(n){
+          if(n.nodeType===1){
+            if(n.matches('a,button')) addHover(n);
+            n.querySelectorAll && n.querySelectorAll('a,button').forEach(addHover);
+          }
+        });
+      });
+    });
+    mo.observe(document.body,{childList:true,subtree:true});
+  });
+})();
+</script>
+
 <!-- LIGHTBOX -->
 <div id="lightbox">
   <img id="lightbox-img" src="" alt=""/>
@@ -589,23 +626,6 @@ else { prevBtn.style.opacity='.3'; prevBtn.style.pointerEvents='none'; }
 if(next){ nextBtn.href=`project.html?id=${next.id}`; document.getElementById('nextName').textContent=next.name; }
 else { nextBtn.style.opacity='.3'; nextBtn.style.pointerEvents='none'; }
 
-/* ── CURSOR ── */
-const cur=document.getElementById('cur'),curR=document.getElementById('curR');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX; my=e.clientY;
-  cur.style.left=mx+'px'; cur.style.top=my+'px';
-});
-(function anim(){
-  rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
-  curR.style.left=rx+'px'; curR.style.top=ry+'px';
-  requestAnimationFrame(anim);
-})();
-document.querySelectorAll('a,button,.tech-pill,.proj-link-btn,.related-item,.proj-nav-btn,.step-item,.carr-btn').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h');});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h');});
-});
-
 /* ── SCROLL PROGRESS ── */
 window.addEventListener('scroll',()=>{
   document.getElementById('prog').style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';
@@ -652,7 +672,7 @@ function closeLightbox(){
 
 lbClose.addEventListener('click', closeLightbox);
 // click backdrop (not the image) to close
-lb.addEventListener('click', e=>{ if(e.target === lb) seLightbox(); });
+lb.addEventListener('click', e=>{ if(e.target === lb) closeLightbox(); });
 // Escape key to close
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); });
 </script>
